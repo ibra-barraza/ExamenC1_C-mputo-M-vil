@@ -51,11 +51,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun actualizarTabla() {
-        tableLayout.removeViews(1, tableLayout.childCount - 1) // Elimina filas anteriores
+        tableLayout.removeViews(1, tableLayout.childCount - 1)
 
         var subtotal = 0.0
 
-        for (i in 0 until 3) { // Siempre mostramos 3 filas
+        for (i in 0 until 3) {
             val fila = TableRow(this)
             if (i < productos.size) {
                 val producto = productos[i]
@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
                 fila.addView(crearCelda(String.format("%.2f", producto.third)))
                 subtotal += producto.third
             } else {
-                // Fila vacía
                 fila.addView(crearCelda(""))
                 fila.addView(crearCelda(""))
                 fila.addView(crearCelda(""))
@@ -75,21 +74,18 @@ class MainActivity : AppCompatActivity() {
         val iva = subtotal * 0.16
         val total = subtotal + iva
 
-        // Agregar fila de Subtotal
         val filaSubtotal = TableRow(this)
         filaSubtotal.addView(crearCelda(""))
         filaSubtotal.addView(crearCelda("Sub-total"))
         filaSubtotal.addView(crearCelda(String.format("%.2f", subtotal)))
         tableLayout.addView(filaSubtotal)
 
-        // Agregar fila de IVA
         val filaIVA = TableRow(this)
         filaIVA.addView(crearCelda(""))
         filaIVA.addView(crearCelda("IVA (16%)"))
         filaIVA.addView(crearCelda(String.format("%.2f", iva)))
         tableLayout.addView(filaIVA)
 
-        // Agregar fila de Total
         val filaTotal = TableRow(this)
         filaTotal.addView(crearCelda(""))
         filaTotal.addView(crearCelda("Total"))
