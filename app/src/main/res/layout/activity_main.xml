@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edtProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Producto" />
+
+    <EditText
+        android:id="@+id/edtPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnCompilar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compilar" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@android:color/darker_gray">
+
+        <TableRow>
+            <TextView android:text="#" android:layout_weight="1" android:gravity="center"/>
+            <TextView android:text="Producto" android:layout_weight="2" android:gravity="center"/>
+            <TextView android:text="$" android:layout_weight="1" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="2" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="2" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="2" android:gravity="center"/>
+            <TextView android:text="" android:layout_weight="1" android:gravity="center"/>
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
